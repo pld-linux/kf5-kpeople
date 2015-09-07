@@ -7,7 +7,7 @@
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf5-%{kfname}
 Version:	5.13.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
@@ -80,6 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libKF5PeopleWidgets.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libKF5PeopleWidgets.so.5
 %dir %{_libdir}/qt5/qml/org/kde/people
+%{_libdir}/qt5/qml/org/kde/people/qmldir
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/people/libKF5PeopleDeclarative.so
 %{_datadir}/kf5/kpeople
 %{_datadir}/kservicetypes5/kpeople_data_source.desktop

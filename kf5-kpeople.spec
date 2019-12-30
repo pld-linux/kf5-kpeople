@@ -1,17 +1,17 @@
 # Conditional build:
 %bcond_with	tests		# build without tests
 #
-%define		kdeframever	5.62
+%define		kdeframever	5.65
 %define		qtver		5.9.0
 %define		kfname		kpeople
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf5-%{kfname}
-Version:	5.62.0
+Version:	5.65.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	7f8fed92786758c369a4c2b1dd5c1eab
+# Source0-md5:	c9350507c81bafe4a7b09535136aa296
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
@@ -84,7 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/qt5/qml/org/kde/people
 %{_libdir}/qt5/qml/org/kde/people/qmldir
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/people/libKF5PeopleDeclarative.so
-%{_datadir}/kf5/kpeople
 %{_datadir}/kservicetypes5/kpeople_data_source.desktop
 %{_datadir}/kservicetypes5/kpeople_plugin.desktop
 %{_datadir}/kservicetypes5/persondetailsplugin.desktop

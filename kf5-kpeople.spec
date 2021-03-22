@@ -1,17 +1,17 @@
 # Conditional build:
 %bcond_with	tests		# build without tests
 #
-%define		kdeframever	5.79
+%define		kdeframever	5.80
 %define		qtver		5.9.0
 %define		kfname		kpeople
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf5-%{kfname}
-Version:	5.79.0
+Version:	5.80.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9261af304aff1defe6e5ef91f276a12a
+# Source0-md5:	d9f90455842e6b9894310b65246cd87e
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
@@ -76,11 +76,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.md
 %{_datadir}/qlogging-categories5/kpeople.categories
 %attr(755,root,root) %{_libdir}/libKF5People.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libKF5People.so.5
+%ghost %{_libdir}/libKF5People.so.5
 %attr(755,root,root) %{_libdir}/libKF5PeopleBackend.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libKF5PeopleBackend.so.5
+%ghost %{_libdir}/libKF5PeopleBackend.so.5
 %attr(755,root,root) %{_libdir}/libKF5PeopleWidgets.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libKF5PeopleWidgets.so.5
+%ghost %{_libdir}/libKF5PeopleWidgets.so.5
 %dir %{_libdir}/qt5/qml/org/kde/people
 %{_libdir}/qt5/qml/org/kde/people/qmldir
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/people/libKF5PeopleDeclarative.so
@@ -91,9 +91,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKF5People.so
-%attr(755,root,root) %{_libdir}/libKF5PeopleBackend.so
-%attr(755,root,root) %{_libdir}/libKF5PeopleWidgets.so
+%{_libdir}/libKF5People.so
+%{_libdir}/libKF5PeopleBackend.so
+%{_libdir}/libKF5PeopleWidgets.so
 %{_includedir}/KF5/KPeople
 %{_libdir}/cmake/KF5People
 %{_libdir}/qt5/mkspecs/modules/qt_KPeople*.pri

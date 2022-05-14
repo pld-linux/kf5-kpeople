@@ -1,17 +1,17 @@
 # Conditional build:
 %bcond_with	tests		# build without tests
 #
-%define		kdeframever	5.93
+%define		kdeframever	5.94
 %define		qtver		5.9.0
 %define		kfname		kpeople
 Summary:	Provides access to all contacts and the people who hold them
 Name:		kf5-%{kfname}
-Version:	5.93.0
+Version:	5.94.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	592a71a3f144e76c57626b46dfca2269
+# Source0-md5:	add7886e4c40a1f391bdb590130bc7ab
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= %{qtver}
